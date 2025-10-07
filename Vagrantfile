@@ -76,6 +76,13 @@ Vagrant.configure("2") do |config|
     apt-get update && apt-get upgrade -y
     apt install gvm -y
     gvm-setup
+    gvm-stop
+
+    greenbone-feed-sync
+
+
+    #Herramientas adicionales
+    apt install zapproxy -y
     
   SHELL
 end
